@@ -8,7 +8,12 @@ import java.util.zip.Inflater;
  */
 public class Compression {
     public static void main(String[] argv) throws Exception {
-        byte[] input = "www.everycoding.com".getBytes();
+        StringBuilder value = new StringBuilder();
+        for (int i = 0; i < 100; i++) {
+            value.append("java gzip 压缩测试");
+        }
+//        byte[] input = "www.everycoding.com".getBytes();
+        byte[] input = value.toString().getBytes();
 
         Deflater compressor = new Deflater();
         compressor.setLevel(Deflater.BEST_COMPRESSION);
@@ -25,6 +30,7 @@ public class Compression {
         bos.close();
         byte[] compressedData = bos.toByteArray();
         System.out.println("压缩后的byte结果：" + Arrays.toString(compressedData));
+        System.out.println(Arrays.toString(compressedData).length());
         // 对压缩数据进行解压
         decompressor(compressedData);
     }
@@ -48,6 +54,7 @@ public class Compression {
         bos.close();
         byte[] decompressedData = bos.toByteArray();
         System.out.println("解压后的byte结果：" + Arrays.toString(decompressedData));
+        System.out.println(Arrays.toString(decompressedData).length());
         System.out.println("解压出字符串：" + bos.toString());
     }
 }
