@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="gcc noversion nomachine -c -O3 -fPIC -Isrc/xxhash -Isrc/lz4 -I../../../../Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/include -I../../../../Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/include/darwin -Ibuild/jni-headers">
+      <target file="net_jpountz_xxhash_XXHashJNI.o" lastModified="15c741360b0">
+         <source file="../../src/jni/net_jpountz_xxhash_XXHashJNI.c" lastModified="15c74106ec8"/>
+      </target>
+      <target file="lz4hc.o" lastModified="15c741360b0">
+         <source file="../../src/lz4/lz4hc.c" lastModified="15c74106ec8"/>
+      </target>
+      <target file="xxhash.o" lastModified="15c741358e0">
+         <source file="../../src/xxhash/xxhash.c" lastModified="15c74106ec8"/>
+      </target>
+      <target file="net_jpountz_lz4_LZ4JNI.o" lastModified="15c741358e0">
+         <source file="../../src/jni/net_jpountz_lz4_LZ4JNI.c" lastModified="15c74106ec8"/>
+      </target>
+      <target file="lz4.o" lastModified="15c741360b0">
+         <source file="../../src/lz4/lz4.c" lastModified="15c74106ec8"/>
+      </target>
+   </processor>
+</history>
