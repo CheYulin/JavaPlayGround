@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="gcc -prebind -dynamiclib">
+      <target file="liblz4-java.dylib" lastModified="15c741360b0">
+         <source file="../../../../../../objects/net_jpountz_lz4_LZ4JNI.o" lastModified="15c741358e0"/>
+         <source file="../../../../../../objects/xxhash.o" lastModified="15c741358e0"/>
+         <source file="../../../../../../objects/lz4.o" lastModified="15c741360b0"/>
+         <source file="../../../../../../objects/lz4hc.o" lastModified="15c741360b0"/>
+         <source file="../../../../../../objects/net_jpountz_xxhash_XXHashJNI.o" lastModified="15c741360b0"/>
+      </target>
+   </processor>
+</history>
