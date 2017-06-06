@@ -7,6 +7,8 @@ import java.util.zip.Inflater;
  * Created by yche on 6/3/17.
  */
 public class Compression {
+    static final int BUFFER = 10240;
+
     public static void main(String[] argv) throws Exception {
         StringBuilder value = new StringBuilder();
         for (int i = 0; i < 100; i++) {
@@ -22,7 +24,7 @@ public class Compression {
 
         ByteArrayOutputStream bos = new ByteArrayOutputStream(input.length);
 
-        byte[] buf = new byte[1024];
+        byte[] buf = new byte[BUFFER];
         while (!compressor.finished()) {
             int count = compressor.deflate(buf);
             bos.write(buf, 0, count);
@@ -45,7 +47,7 @@ public class Compression {
         Inflater decompressor = new Inflater();
         decompressor.setInput(compressedData);
         ByteArrayOutputStream bos = new ByteArrayOutputStream(compressedData.length);
-        byte[] buf = new byte[1024];
+        byte[] buf = new byte[BUFFER];
         while (!decompressor.finished()) {
             int count = decompressor.inflate(buf);
             bos.write(buf, 0, count);
