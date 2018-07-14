@@ -1,3 +1,5 @@
+package serialization;
+
 import java.io.ByteArrayOutputStream;
 import java.util.Arrays;
 import java.util.zip.Deflater;

@@ -1,3 +1,5 @@
+package serialization;
+
 import java.io.Serializable;
 
 /**
