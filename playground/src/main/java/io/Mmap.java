@@ -35,13 +35,8 @@ public class Mmap {
             Method clean = Class.forName("sun.misc.Cleaner").getMethod("clean");
             clean.invoke(cleaner.invoke(mbb));
             System.out.println("unmap successful");
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (NoSuchMethodException | ClassNotFoundException |
+                IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
     }
